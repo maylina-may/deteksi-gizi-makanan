@@ -1,0 +1,12 @@
+[phases.install]
+cmds = [
+  "apt-get update && apt-get install -y libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev libgomp1",
+  "pip install --upgrade pip"
+]
+
+[phases.setup]
+nixPkgs = ["gcc", "g++", "make"]
+
+[phases.build]
+cmds = ["pip install -r requirements.txt"]
+
