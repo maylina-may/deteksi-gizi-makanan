@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+.env
+runs/
+yolo11n.pt
+yolo11s.pt
+.ipynb_checkpoints/
+*.ipynb
+dataset/
+Capstone Bangkit Academy 2023.v1i.yolov11/
+
+# Model untuk deployment (jangan di-ignore, Railway butuh ini)
+# best.pt tetap di-track untuk deployment
+# HAPUS baris "best.pt" dari gitignore kalo ada
+
