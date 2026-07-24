@@ -430,13 +430,6 @@ def main():
             image_source_name = getattr(uploaded, "name", "uploaded.jpg")
             preview_image = Image.open(io.BytesIO(image_bytes))
     else:
-        # --- AMBIL FOTO (Custom approach untuk HP) ---
-        st.markdown("""
-        <div style="margin-bottom:8px;font-size:14px;color:#666;">
-            💡 Klik tombol di bawah untuk mengakses kamera. Untuk pengalaman terbaik di HP, 
-            gunakan browser Chrome atau Safari.
-        </div>
-        """, unsafe_allow_html=True)
         
         # Mobile-friendly camera input via HTML input capture
         # First, try Streamlit's camera_input (works on newer mobile browsers)
