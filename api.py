@@ -12,7 +12,9 @@ app = Flask(__name__)
 CORS(app)
 
 # ========== Konfigurasi Groq ==========
-KEY = "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"
+KEY = os.environ.get("GROQ_API_KEY")
+if not KEY:
+    raise ValueError("GROQ_API_KEY environment variable tidak ditemukan! Set dengan: set GROQ_API_KEY=your_key")
 MODEL = "llama-3.3-70b-versatile"  # Model yang tersedia di Groq
 
 # ========== Load YOLO Model ==========
