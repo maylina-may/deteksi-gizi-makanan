@@ -12,27 +12,20 @@ app = Flask(__name__)
 CORS(app)
 
 # ========== Konfigurasi Groq ==========
-# Gunakan environment variable untuk keamanan
-KEY = os.environ.get("GROQ_API_KEY")
-if not KEY:
-    raise ValueError("GROQ_API_KEY environment variable tidak ditemukan! Set dengan: export GROQ_API_KEY=your_key")
+KEY = "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"
 MODEL = "llama-3.3-70b-versatile"  # Model yang tersedia di Groq
 
 # ========== Load YOLO Model ==========
-# Coba model baru dulu (train3), fallback ke train2, lalu default yolo11n.pt
+# Coba model baru dulu (train3), fallback ke train2
 model_path_new = os.path.join(".", "runs", "detect", "train3", "weights", "best.pt")
 model_path_old = os.path.join(".", "runs", "detect", "train2", "weights", "best.pt")
-model_path_default = "yolo11n.pt"
 
 if os.path.exists(model_path_new):
     model_path = model_path_new
     print(f"Loading model from: {model_path_new}")
-elif os.path.exists(model_path_old):
+else:
     model_path = model_path_old
     print(f"Loading model from: {model_path_old}")
-else:
-    model_path = model_path_default
-    print(f"Model terlatih tidak ditemukan, menggunakan default: {model_path_default}")
 
 modelyolo = YOLO(model_path)
 
@@ -233,19 +226,6 @@ def chat():
 
     except Exception as e:
         return jsonify({"error": f"Internal server error: {str(e)}"}), 500
-
-# ========== Endpoint: Health Check (untuk Render) ==========
-@app.route("/", methods=["GET"])
-def health():
-    return jsonify({
-        "status": "ok",
-        "message": "Food Detection API is running",
-        "model": os.path.basename(model_path)
-    })
-
-@app.route("/health", methods=["GET"])
-def health_check():
-    return jsonify({"status": "ok"})
 
 # ========== Main ==========
 if __name__ == "__main__":
