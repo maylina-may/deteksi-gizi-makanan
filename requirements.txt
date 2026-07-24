@@ -1,0 +1,17 @@
+# ===== Core =====
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+pillow>=10.0.0
+requests>=2.31.0
+
+# ===== Computer Vision (OpenCV tanpa GUI, lebih ringan) =====
+opencv-python-headless>=4.8.0
+
+# ===== YOLO / Ultralytics =====
+ultralytics>=8.0.0
+
+# ===== PyTorch (CPU-only, kompatibel dengan Railway) =====
+torch>=2.0.0
+torchvision>=0.15.0
+
