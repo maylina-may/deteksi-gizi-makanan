@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.env
+runs/
+best.pt
+yolo11n.pt
+yolo11s.pt
+.ipynb_checkpoints/
+*.ipynb
+dataset/
+Capstone Bangkit Academy 2023.v1i.yolov11/
+

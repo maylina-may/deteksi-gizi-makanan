@@ -1,0 +1,10 @@
+flask
+flask-cors
+gunicorn
+numpy
+opencv-python
+pandas
+pillow
+requests
+streamlit
+ultralytics
