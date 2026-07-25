@@ -1,8 +1,4 @@
 streamlit
-numpy
-opencv-python-headless
-pillow
 requests
 pandas
 ultralytics
-
