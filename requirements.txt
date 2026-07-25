@@ -1,10 +1,8 @@
-flask
-flask-cors
+streamlit
 numpy
-opencv-python
-pandas
+opencv-python-headless
 pillow
 requests
-streamlit
+pandas
 ultralytics
 
