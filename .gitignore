@@ -3,7 +3,6 @@ __pycache__/
 *.pyc
 .env
 runs/
-best.pt
 yolo11n.pt
 yolo11s.pt
 .ipynb_checkpoints/
