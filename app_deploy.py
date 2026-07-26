@@ -265,7 +265,7 @@ def main():
         if preview_image:
             st.image(preview_image, caption="Pratinjau Gambar", use_container_width=True)
         detect_btn = st.button(
-            "🔎 Deteksi Gizi",
+            "🔎 Deteksi Citra",
             type="primary",
             use_container_width=True,
             disabled=(image_bytes is None)
