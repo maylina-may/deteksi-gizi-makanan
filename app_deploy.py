@@ -204,7 +204,7 @@ def main():
 
     st.title("🍽️ Deteksi Gizi Makanan")
     st.write(
-        "Upload foto makanan atau ambil foto langsung.
+        "Upload foto makanan atau ambil foto langsung."
     )
 
     # ---- SIDEBAR ----
