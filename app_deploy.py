@@ -221,8 +221,7 @@ def main():
 
         # Info status
         st.divider()
-        st.caption("**Status Model:** ✅ YOLO dimuat")
-        st.caption(f"**Kelas makanan:** {len(CLASS_NAMES)} jenis")
+        st.caption("**Status Model:** Aktif")
 
     # ---- INPUT METHOD ----
     input_method = st.radio(
@@ -249,12 +248,6 @@ def main():
             image_source_name = getattr(uploaded, "name", "uploaded.jpg")
             preview_image = Image.open(io.BytesIO(image_bytes))
     else:
-        st.markdown("""
-        <div style="margin-bottom:8px;font-size:14px;color:#666;">
-            💡 Gunakan tombol di bawah untuk mengakses kamera.
-        </div>
-        """, unsafe_allow_html=True)
-
         cam = st.camera_input(
             "Ambil Foto",
             label_visibility="collapsed",
