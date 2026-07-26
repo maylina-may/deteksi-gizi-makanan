@@ -204,8 +204,7 @@ def main():
 
     st.title("🍽️ Deteksi Gizi Makanan")
     st.write(
-        "Upload foto makanan atau ambil foto langsung. Sistem akan mendeteksi makanan "
-        "dengan YOLO dan menampilkan informasi kandungan gizi."
+        "Upload foto makanan atau ambil foto langsung.
     )
 
     # ---- SIDEBAR ----
