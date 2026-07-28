@@ -12,7 +12,6 @@ app = Flask(__name__)
 CORS(app)
 
 # ========== Konfigurasi Groq ==========
-# Coba ambil dari environment variable dulu, fallback ke hardcoded key
 KEY = os.environ.get("GROQ_API_KEY") or "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"
 MODEL = "llama-3.3-70b-versatile"  # Model yang tersedia di Groq
 
