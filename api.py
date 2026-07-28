@@ -12,10 +12,8 @@ app = Flask(__name__)
 CORS(app)
 
 # ========== Konfigurasi Groq ==========
-KEY = os.environ.get("GROQ_API_KEY")
-if not KEY:
-    raise ValueError("GROQ_API_KEY environment variable tidak ditemukan! Set dengan: set GROQ_API_KEY=your_key")
-MODEL = "llama-3.3-70b-versatile"  # Model yang tersedia di Groq
+KEY = os.environ.get("GROQ_API_KEY") or "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"
+MODEL = "llama-3.3-70b-versatile"  
 
 # ========== Load YOLO Model ==========
 # Coba model baru dulu (train3), fallback ke train2
