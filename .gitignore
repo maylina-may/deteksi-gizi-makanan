@@ -2,6 +2,7 @@ venv/
 __pycache__/
 *.pyc
 .env
+.streamlit/secrets.toml
 runs/
 yolo11n.pt
 yolo11s.pt
