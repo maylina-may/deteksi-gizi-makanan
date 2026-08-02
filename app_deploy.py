@@ -26,7 +26,7 @@ st.set_page_config(
 # ============================================================
 # Groq API Config
 # ============================================================
-GROQ_KEY = "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"
+GROQ_KEY = "xxxxx"
 GROQ_MODEL = "llama-3.3-70b-versatile"
 
 # ============================================================
